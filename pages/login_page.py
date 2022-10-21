@@ -8,6 +8,7 @@ import allure
 
 class LoginPage(BaseClass):
 
+
     # Locators
     CHOOSE_LOCATION = "//button[@class='base-ui-button-v2_medium base-ui-button-v2_brand base-ui-button-v2_ico-none " \
                       "base-ui-button-v2 v-confirm-city__btn']"
@@ -86,4 +87,5 @@ class LoginPage(BaseClass):
             self.input_password("PaRoL1989")
             self.click_enter_to_lk_button()
             assert self.is_element_present(By.XPATH, self.CHECK_AVATAR_USER), "Avatar logo wasn't found"
+            self.get_screenshot()
             Logger.add_end_step(url=self.browser.current_url, method="authorization")
