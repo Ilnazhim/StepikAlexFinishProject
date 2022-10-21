@@ -1,0 +1,16 @@
+
+..open browser
+
+Start Test 1
+Start logs
+Current url https://www.dns-shop.ru/
+Click enter button
+Click enter button v2
+Click enter with password
+Input email
+Input password
+Click enter to lk button
+End logs
+Finish Test 1
+
+..quit browser
