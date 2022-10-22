@@ -1,0 +1,17 @@
+
+-----
+Test: test_buy_product.py::test_select_product_1 (call)
+Start time: 2022-10-22 12:58:15.906909
+Start name method: authorization
+
+End time: 2022-10-22 12:58:24.976780
+End name method: authorization
+URL: https://www.dns-shop.ru/
+
+-----
+
+-----
+Test: test_buy_product.py::test_select_product_1 (call)
+Start time: 2022-10-22 12:58:24.977779
+Start name method: select_products_1
+

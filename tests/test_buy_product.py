@@ -2,7 +2,7 @@ import time
 import allure
 from pages.login_page import LoginPage
 from pages.main_page import MainPage
-
+from pages.cart_page import CartPage
 
 @allure.description("Test select product 1")
 def test_select_product_1(browser):
@@ -16,21 +16,5 @@ def test_select_product_1(browser):
     mp = MainPage(browser, link)
     mp.select_products_1()
 
-
-    # mp = MainPage(browser)
-    # mp.select_products_1()
-    #
-    # cp = CartPage(browser)
-    # cp.prouct_confirmation()
-    #
-    # cip = ClientInformationPage(browser)
-    # cip.input_information()
-    #
-    # pay = PaymentPage(browser)
-    # pay.payment()
-    #
-    # fp = FinishPage(browser)
-    # fp.finish()
-
     print("Finish Test 1")
-    time.sleep(5)
+    time.sleep(3)

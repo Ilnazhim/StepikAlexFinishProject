@@ -1,38 +1,48 @@
+import time
+
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from utilities.logger import Logger
 from base.base_class import BaseClass
 import allure
+from pages.main_page import MainPage
+
 
 class CartPage(BaseClass):
 
 
-    def __init__(self, driver):
-        self.driver = driver
-        super().__init__(driver)
-
     # Locators
 
-    checkout_button = "//button[@id='checkout']"
+    DELETE_PRODUCT = "//p[@class='remove-button__title']"
+    NAME_PHONE_CART = "//a[@class='base-ui-link base-ui-link_gray_dark']"
+    PRICE_PHONE_CART = "//div[@class='price__block price__block_main']//span"
 
 
     # Getters
-    def get_checkout_button(self):
-        return WebDriverWait(self.driver, 30).until(EC.element_to_be_clickable((By.XPATH, self.checkout_button)))
+    def get_delete_product(self):
+        return WebDriverWait(self.browser, 30).until(EC.element_to_be_clickable((By.XPATH, self.DELETE_PRODUCT)))
+
+    def get_name_phone_cart(self):
+        return self.browser.find_element(By.XPATH, self.NAME_PHONE_CART)
+
+    def get_price_phone_cart(self):
+        return self.browser.find_element(By.XPATH, self.PRICE_PHONE_CART)
 
 
     #Actions
-    def click_checkout_button(self):
-        self.get_checkout_button().click()
-        print("Click checkout_button")
+    def click_delete_product(self):
+        self.get_delete_product().click()
+        print("Click delete product")
 
 
     # Metods
-    def prouct_confirmation(self):
-        with allure.step("prouct_confirmation"):
-            Logger.add_start_step(method="prouct_confirmation")
-            self.get_current_url()
-            self.click_checkout_button()
-            Logger.add_end_step(url=self.driver.current_url, method="prouct_confirmation")
+    def cart_product(self):
+        with allure.step("Cart product"):
+            Logger.add_start_step(method="cart_product")
+            self.assert_word(self.get_name_phone_cart(), self.get_name_phone())
+            self.assert_word(self.get_price_phone_cart(), self.get_price_phone())
+            time.sleep(3)
+            self.click_delete_product()
+            Logger.add_end_step(url=self.browser.current_url, method="cart_product")
 

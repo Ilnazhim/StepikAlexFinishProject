@@ -21,7 +21,8 @@ class BaseClass:
     """Metod assert word"""
     def assert_word(self, word, result):
         value_word = word.text
-        assert value_word == result
+        value_result = result.text
+        assert value_word == value_result
         print("Good value word")
 
     """Metod is element present"""
@@ -32,7 +33,6 @@ class BaseClass:
         except NoSuchElementException:
             return False
         return True
-
 
     """Metod screenshot"""
     def get_screenshot(self):

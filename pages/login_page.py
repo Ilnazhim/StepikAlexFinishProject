@@ -1,3 +1,6 @@
+import time
+
+from selenium.common import ElementClickInterceptedException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -81,10 +84,14 @@ class LoginPage(BaseClass):
             self.get_current_url()
 
             self.click_enter_button()
-            self.click_enter_button_v2()
+            try:
+                self.click_enter_button_v2()
+            except ElementClickInterceptedException:
+                time.sleep(2)
+                self.click_enter_button_v2()
             self.click_enter_with_password()
-            self.input_email("bass_boss@mail.ru")
-            self.input_password("PaRoL1989")
+            self.input_email("marinin.am@mail.ru")
+            self.input_password("Test2022")
             self.click_enter_to_lk_button()
             assert self.is_element_present(By.XPATH, self.CHECK_AVATAR_USER), "Avatar logo wasn't found"
             self.get_screenshot()
