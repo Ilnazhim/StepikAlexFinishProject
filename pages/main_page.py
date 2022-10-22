@@ -27,22 +27,22 @@ class MainPage(BaseClass):
 
     # Getters
     def get_smartphone_and_gadgets_category(self):
-        return WebDriverWait(self.browser, 10).until(EC.element_to_be_clickable((By.XPATH, self.SMARTPHONE_AND_GADGETS_CATEGORY)))
+        return WebDriverWait(self.browser, 30).until(EC.element_to_be_clickable((By.XPATH, self.SMARTPHONE_AND_GADGETS_CATEGORY)))
 
     def get_smartphone_subcategory(self):
-        return WebDriverWait(self.browser, 10).until(EC.element_to_be_clickable((By.XPATH, self.SMARTPHONE_SUBCATEGORY)))
+        return WebDriverWait(self.browser, 30).until(EC.element_to_be_clickable((By.XPATH, self.SMARTPHONE_SUBCATEGORY)))
 
     def get_input_cost_min(self):
-        return WebDriverWait(self.browser, 10).until(EC.element_to_be_clickable((By.XPATH, self.INPUT_COST_MIN)))
+        return WebDriverWait(self.browser, 30).until(EC.element_to_be_clickable((By.XPATH, self.INPUT_COST_MIN)))
 
     def get_input_cost_max(self):
-        return WebDriverWait(self.browser, 10).until(EC.element_to_be_clickable((By.XPATH, self.INPUT_COST_MAX)))
+        return WebDriverWait(self.browser, 30).until(EC.element_to_be_clickable((By.XPATH, self.INPUT_COST_MAX)))
 
     def get_choose_model_samsung(self):
-        return WebDriverWait(self.browser, 10).until(EC.element_to_be_clickable((By.XPATH, self.CHOOSE_MODEL_SAMSUNG)))
+        return WebDriverWait(self.browser, 30).until(EC.element_to_be_clickable((By.XPATH, self.CHOOSE_MODEL_SAMSUNG)))
 
     def get_submit_button(self):
-        return WebDriverWait(self.browser, 10).until(EC.element_to_be_clickable((By.XPATH, self.SUBMIT_BUTTON)))
+        return WebDriverWait(self.browser, 30).until(EC.element_to_be_clickable((By.XPATH, self.SUBMIT_BUTTON)))
 
     def get_name_phone(self):
         return self.browser.find_element(By.XPATH, self.NAME_PHONE)
@@ -51,13 +51,13 @@ class MainPage(BaseClass):
         return self.browser.find_element(By.XPATH, self.PRICE_PHONE)
 
     def get_buy_button(self):
-        return WebDriverWait(self.browser, 10).until(EC.element_to_be_clickable((By.XPATH, self.BUY_BUTTON)))
+        return WebDriverWait(self.browser, 30).until(EC.element_to_be_clickable((By.XPATH, self.BUY_BUTTON)))
 
     def get_cart_button(self):
-        return WebDriverWait(self.browser, 10).until(EC.element_to_be_clickable((By.XPATH, self.CART_BUTTON)))
+        return WebDriverWait(self.browser, 30).until(EC.element_to_be_clickable((By.XPATH, self.CART_BUTTON)))
 
     def get_delete_product(self):
-        return WebDriverWait(self.browser, 10).until(EC.element_to_be_clickable((By.XPATH, self.DELETE_PRODUCT)))
+        return WebDriverWait(self.browser, 30).until(EC.element_to_be_clickable((By.XPATH, self.DELETE_PRODUCT)))
 
     def get_name_phone_cart(self):
         return self.browser.find_element(By.XPATH, self.NAME_PHONE_CART)
