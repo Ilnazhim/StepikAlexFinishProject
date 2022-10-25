@@ -1,0 +1,33 @@
+
+-----
+Test: test_buy_product.py::test_select_product_1 (call)
+Start time: 2022-10-25 17:29:01.853237
+Start name method: authorization
+
+End time: 2022-10-25 17:29:08.120988
+End name method: authorization
+URL: https://www.dns-shop.ru/
+
+-----
+
+-----
+Test: test_buy_product.py::test_select_product_1 (call)
+Start time: 2022-10-25 17:29:08.121989
+Start name method: select_products_1
+
+End time: 2022-10-25 17:29:12.194975
+End name method: select_products_1
+URL: https://www.dns-shop.ru/catalog/17a8a01d16404e77/smartfony/
+
+-----
+
+-----
+Test: test_buy_product.py::test_select_product_1 (call)
+Start time: 2022-10-25 17:29:12.196975
+Start name method: choose_filter
+
+End time: 2022-10-25 17:29:23.035299
+End name method: choose_filter
+URL: https://www.dns-shop.ru/cart/
+
+-----

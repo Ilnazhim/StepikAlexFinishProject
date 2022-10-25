@@ -1,6 +1,6 @@
 import time
 
-from selenium.common import ElementClickInterceptedException
+from selenium.common import ElementClickInterceptedException, TimeoutException
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -86,8 +86,8 @@ class LoginPage(BaseClass):
             self.click_enter_button()
             try:
                 self.click_enter_button_v2()
-            except ElementClickInterceptedException:
-                time.sleep(2)
+            except ElementClickInterceptedException or TimeoutException:
+                time.sleep(3)
                 self.click_enter_button_v2()
             self.click_enter_with_password()
             self.input_email("marinin.am@mail.ru")

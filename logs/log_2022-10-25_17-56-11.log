@@ -1,0 +1,49 @@
+
+-----
+Test: test_buy_product.py::test_select_product_1 (call)
+Start time: 2022-10-25 17:56:17.744535
+Start name method: authorization
+
+End time: 2022-10-25 17:56:23.704252
+End name method: authorization
+URL: https://www.dns-shop.ru/
+
+-----
+
+-----
+Test: test_buy_product.py::test_select_product_1 (call)
+Start time: 2022-10-25 17:56:23.705255
+Start name method: select_products_1
+
+End time: 2022-10-25 17:56:28.590446
+End name method: select_products_1
+URL: https://www.dns-shop.ru/catalog/17a8a01d16404e77/smartfony/
+
+-----
+
+-----
+Test: test_buy_product.py::test_select_product_1 (call)
+Start time: 2022-10-25 17:56:28.591447
+Start name method: choose_filter
+
+End time: 2022-10-25 17:56:34.029067
+End name method: choose_filter
+URL: https://www.dns-shop.ru/catalog/17a8a01d16404e77/smartfony/?price=15000-20000&brand=samsung
+
+-----
+
+-----
+Test: test_buy_product.py::test_select_product_1 (call)
+Start time: 2022-10-25 17:56:34.030065
+Start name method: go_to_cart
+
+End time: 2022-10-25 17:56:40.055602
+End name method: go_to_cart
+URL: https://www.dns-shop.ru/cart/
+
+-----
+End time: 2022-10-25 17:56:40.868456
+End name method: finish_action
+URL: https://www.dns-shop.ru/cart/
+
+-----
